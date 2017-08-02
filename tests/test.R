@@ -39,7 +39,7 @@ addhealth_design <-
 		
 		one = 1 ,
 		
-		male = as.numeric( bio_sex == 1 ) ,
+		male = as.numeric( as.numeric( bio_sex ) == 1 ) ,
 		
 		how_many_hours_of_computer_games = ifelse( h1da10 > 99 , NA , h1da10 ) ,
 		
