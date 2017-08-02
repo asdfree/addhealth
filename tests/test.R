@@ -82,7 +82,7 @@ svyratio(
 	addhealth_design ,
 	na.rm = TRUE
 )
-sub_addhealth_design <- subset( addhealth_design , h1gh1 %in% c( 4 , 5 ) )
+sub_addhealth_design <- subset( addhealth_design , as.numeric( h1gh1 ) %in% c( 4 , 5 ) )
 svymean( ~ how_many_hours_of_computer_games , sub_addhealth_design , na.rm = TRUE )
 this_result <- svymean( ~ how_many_hours_of_computer_games , addhealth_design , na.rm = TRUE )
 
