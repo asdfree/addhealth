@@ -37,13 +37,7 @@ addhealth_design <-
 	update( 
 		addhealth_design , 
 		
-		birthdate = as.Date( paste0( "19" , h1gi1y , "-" , h1gi1m , "-15" ) ) ,
-		
-		w1intdate = as.Date( paste0( "19" , iyear , "-" , imonth , "-" , iday ) ) ,
-		
-		male = ( bio_sex == 1 ) ,
-		
-		w1age = as.integer( ( w1intdate - birthdate ) / 365.25 ) ,
+		male = as.numeric( bio_sex == 1 ) ,
 		
 		how_many_hours_of_computer_games = ifelse( h1da10 > 99 , NA , h1da10 ) ,
 		
