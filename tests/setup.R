@@ -3,8 +3,8 @@ my_email_address <- Sys.getenv( "my_email_address" )
 my_password <- Sys.getenv( "my_password" )
 library(lodown)
 lodown( "addhealth" , output_dir = file.path( getwd() ) , 
-
-
+	your_email = my_email_address , 
+	your_password = my_password )
 library(lodown)
 # examine all available ADDHEALTH microdata files
 addhealth_cat <-
@@ -17,8 +17,8 @@ addhealth_cat <-
 addhealth_cat <- subset( addhealth_cat , wave == "wave i" )
 # download the microdata to your local computer
 lodown( "addhealth" , addhealth_cat , 
-
-
+	your_email = my_email_address , 
+	your_password = my_password )
 
 options( survey.lonely.psu = "adjust" )
 
