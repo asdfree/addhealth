@@ -1,8 +1,8 @@
 if ( .Platform$OS.type == 'windows' ) memory.limit( 256000 )
-
-options("lodown.cachaca.savecache"=FALSE)
 my_email_address <- Sys.getenv( "my_email_address" )
 my_password <- Sys.getenv( "my_password" )
+options("lodown.cachaca.savecache"=FALSE)
+
 library(lodown)
 lodown( "addhealth" , output_dir = file.path( getwd() ) , 
 	your_email = my_email_address , 
