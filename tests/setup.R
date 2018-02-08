@@ -18,9 +18,9 @@ addhealth_cat <-
 # wave i only
 addhealth_cat <- subset( addhealth_cat , wave == "wave i" )
 # download the microdata to your local computer
-
-
-
+addhealth_cat <- lodown( "addhealth" , addhealth_cat , 
+	your_email = my_email_address , 
+	your_password = my_password )
 
 options( survey.lonely.psu = "adjust" )
 
