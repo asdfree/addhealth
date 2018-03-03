@@ -29,7 +29,7 @@ library(survey)
 addhealth_df <- 
 	readRDS( 
 		file.path( getwd() , 
-		"wave i/wave i consolidated.rds" ) 
+		"wave i consolidated.rds" ) 
 	)
 
 addhealth_design <- 
