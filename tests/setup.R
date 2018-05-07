@@ -140,26 +140,6 @@ addhealth_srvyr_design %>%
 	group_by( h1gh25 ) %>%
 	summarize( mean = survey_mean( how_many_hours_of_computer_games , na.rm = TRUE ) )
 
-svyset cluster2 [pweight=gswgt1]
-svy: mean w1hrtv
-
-/*
-
-Survey: Mean estimation
-
-Number of strata = 1 Number of obs = 6477
-Number of PSUs = 132 Population size = 22159516
- Design df = 131
-
---------------------------------------------------------------
- | Linearized
- | Mean Std. Err. [95% Conf. Interval]
--------------+------------------------------------------------
- w1hrtv | 15.64193 .3902066 14.87 16.41385
---------------------------------------------------------------
-*/
-
-
 result <-
 	svymean( 
 		~ hours_of_television ,
